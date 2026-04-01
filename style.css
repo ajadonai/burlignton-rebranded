@@ -962,7 +962,7 @@ select.as-f-input option{background:#0D1E2B;color:var(--white)}
 
 .lg-body{max-width:1200px;margin:0 auto;padding:60px var(--side-pad) 80px;display:grid;grid-template-columns:220px 1fr;gap:64px;align-items:start}
 
-.lg-sidebar{position:sticky;top:100px}
+.lg-sidebar{position:sticky;top:100px;height:auto;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;border:none;padding:0;z-index:auto;display:block;flex-direction:column}
 .lg-sidebar-title{font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-300);margin-bottom:16px}
 .lg-sidebar a{display:block;font-size:.82rem;color:var(--gray-400);text-decoration:none;padding:8px 0 8px 16px;border-left:2px solid transparent;transition:all .2s;margin-bottom:2px}
 .lg-sidebar a:hover{color:var(--gray-700);border-left-color:var(--gray-200)}
