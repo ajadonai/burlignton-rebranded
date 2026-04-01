@@ -646,3 +646,85 @@ select.bk-f-input{appearance:none;background-image:url("data:image/svg+xml,%3Csv
   .sv-desktop-only{display:none}
   .sv-mobile-only{display:block}
 }
+
+/* ═══════════════════════════════════════════════
+   ASSESSMENT PAGE
+   ═══════════════════════════════════════════════ */
+
+.as-hero{padding:160px 0 80px;background:var(--dark-base);position:relative;overflow:hidden}
+.as-hero-bg{position:absolute;inset:0;background:url('/hero-bg.jpg') center/cover no-repeat;filter:brightness(.12) saturate(.3);z-index:0}
+.as-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 40% 50%,rgba(13,148,136,.1),transparent);z-index:1}
+.as-hero-inner{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:48px}
+.as-hero-text{max-width:520px}
+.as-hero h1{font-family:var(--serif);font-size:clamp(2rem,4vw,2.8rem);font-weight:500;color:var(--white);line-height:1.15;margin-bottom:16px}
+.as-hero h1 em{font-style:italic;background:linear-gradient(135deg,var(--teal),var(--teal-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.as-hero p{font-size:.95rem;color:rgba(255,255,255,.45);line-height:1.8}
+
+/* Step indicator */
+.as-form-section{padding:var(--section-pad) 0;background:var(--off-white)}
+.as-steps-bar{display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:40px}
+.as-step-ind{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:600;transition:all .3s}
+.as-step-ind.active{background:var(--teal);color:var(--white)}
+.as-step-ind.inactive{background:var(--gray-100);color:var(--gray-400)}
+.as-step-ind.complete{background:var(--teal);color:var(--white)}
+.as-step-line{width:80px;height:2px;background:var(--gray-100);transition:background .3s}
+.as-step-line.active{background:var(--teal)}
+.as-step-labels{position:absolute;display:flex;gap:80px;margin-top:56px;left:50%;transform:translateX(-50%)}
+.as-step-label{font-size:.72rem;color:var(--gray-300);text-align:center;min-width:90px;transition:color .3s}
+.as-step-label.active{color:var(--teal);font-weight:500}
+
+/* Form card */
+.as-form-card{max-width:740px;margin:0 auto;background:var(--white);border:1px solid var(--gray-100);border-radius:20px;padding:40px}
+
+/* Steps */
+.as-step{display:none}
+.as-step.active{display:block}
+
+/* Error messages */
+.as-error{display:none;font-size:.72rem;color:#E24B4A;margin-top:4px}
+
+/* Range options */
+.as-range-opts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.as-range-opt{padding:11px 12px;border:1px solid var(--gray-100);border-radius:10px;background:var(--white);color:var(--gray-400);font-size:.82rem;font-family:var(--sans);cursor:pointer;transition:all .2s;text-align:center}
+.as-range-opt:hover{border-color:rgba(13,148,136,.25);color:var(--gray-700)}
+.as-range-opt.selected{background:rgba(13,148,136,.06);border-color:var(--teal);color:var(--teal);font-weight:500}
+
+/* Evidence chips */
+.as-chip-label{font-size:.74rem;font-weight:500;color:var(--gray-400);margin-bottom:8px;margin-top:16px}
+.as-chip-label:first-of-type{margin-top:0}
+.as-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.as-chip{padding:8px 14px;border:1px solid var(--gray-100);border-radius:100px;background:var(--white);color:var(--gray-400);font-size:.74rem;font-family:var(--sans);cursor:pointer;transition:all .2s}
+.as-chip:hover{border-color:rgba(13,148,136,.25);color:var(--gray-700)}
+.as-chip.checked{background:rgba(13,148,136,.06);border-color:var(--teal);color:var(--teal)}
+
+/* File upload */
+.as-file-upload{position:relative;border:2px dashed var(--gray-100);border-radius:14px;padding:32px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;transition:border-color .2s;cursor:pointer}
+.as-file-upload:hover{border-color:rgba(13,148,136,.25)}
+.as-file-name{display:none;font-size:.8rem;color:var(--teal);margin-top:8px;font-weight:500}
+
+/* Form nav */
+.as-form-nav{display:flex;justify-content:space-between;align-items:center;margin-top:24px}
+
+/* What happens after */
+.as-after{padding:var(--section-pad) 0;background:var(--dark-base);position:relative}
+.as-after::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,transparent,transparent 80px,rgba(45,212,191,.015) 80px,rgba(45,212,191,.015) 81px)}
+.as-after h2{font-family:var(--serif);font-size:clamp(1.4rem,2.5vw,1.8rem);font-weight:500;color:var(--white);text-align:center;margin-bottom:48px;position:relative;z-index:1}
+.as-after-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;z-index:1}
+.as-after-step{padding:28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:16px}
+.as-after-num{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--teal-bright);margin-bottom:12px}
+.as-after-step h4{font-family:var(--serif);font-size:.92rem;font-weight:500;color:var(--white);margin-bottom:6px}
+.as-after-step p{font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.6;margin:0}
+
+/* Assessment responsive */
+@media(max-width:768px){
+  .as-hero{padding:120px 0 60px}
+  .as-hero-inner{flex-direction:column;text-align:center}
+  .as-form-card{padding:24px 20px}
+  .as-range-opts{grid-template-columns:1fr 1fr}
+  .as-after-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .as-step-labels{gap:40px}
+}
+@media(max-width:480px){
+  .as-after-grid{grid-template-columns:1fr}
+  .bk-f-row{grid-template-columns:1fr}
+}
