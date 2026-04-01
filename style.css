@@ -160,7 +160,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 clamp(24px,6vw,12
 /* ── FOOTER ── */
 footer{background:linear-gradient(180deg,var(--dark-base),#0A141A);border-top:1px solid rgba(45,212,191,.08);padding:72px var(--side-pad) 40px}
 .ft-inner{max-width:1200px;margin:0 auto}
-.ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06)}
+.ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06)}
 .ft-brand{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--white);display:flex;align-items:center;gap:4px}
 .ft-brand-dot{width:8px;height:8px;border-radius:50%;background:var(--teal-bright)}
 .ft-desc{font-size:.82rem;line-height:1.7;margin-top:12px;max-width:260px;color:rgba(255,255,255,.4)}
