@@ -666,3 +666,14 @@ footer{scroll-snap-align:end}
 /* Footer override — 5 columns (brand + 4 link cols) */
 .ft-top{grid-template-columns:1.4fr 1fr 1fr 1fr 1fr!important}
 @media(max-width:900px){.ft-top{grid-template-columns:1fr 1fr!important}}
+
+/* Missing utility classes */
+.btn-link{font-size:.84rem;color:var(--teal);text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:6px;transition:gap .3s}
+.btn-link:hover{gap:12px}
+
+/* Footer grid fix — 5 columns for new Company column */
+.ft-top{grid-template-columns:1.5fr 1fr 1fr 1fr 1fr!important}
+
+@media(max-width:1024px){.ft-top{grid-template-columns:1fr 1fr 1fr!important}}
+@media(max-width:768px){.ft-top{grid-template-columns:1fr 1fr!important}}
+@media(max-width:480px){.ft-top{grid-template-columns:1fr!important}}
