@@ -522,3 +522,23 @@ body.home .hero{opacity:1;transform:none}
   .tm-grid{grid-template-columns:1fr 1fr}
   .tm-card-photo{height:140px}
 }
+
+/* Team page snap scroll */
+body.team{scroll-snap-type:y proximity;overflow-y:scroll}
+body.team .tm-hero,
+body.team .tm-founders,
+body.team .tm-group,
+body.team .tm-join{scroll-snap-align:start;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center}
+body.team .tm-hero{justify-content:center;align-items:center}
+body.team footer{scroll-snap-align:end}
+
+/* Section nav dots for team page */
+body.team .section-nav{display:flex}
+
+@media(max-width:768px){
+  body.team{scroll-snap-type:none}
+  body.team .tm-hero,
+  body.team .tm-founders,
+  body.team .tm-group,
+  body.team .tm-join{min-height:auto;scroll-snap-align:none}
+}
