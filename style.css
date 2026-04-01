@@ -1326,6 +1326,10 @@ select.as-f-input option{background:#0D1E2B;color:var(--white)}
 .tp-body{max-width:800px;margin:0 auto;padding:60px var(--side-pad) 40px}
 .tp-body p{font-size:.9rem;color:var(--gray-400);line-height:1.8;margin-bottom:16px}
 .tp-body strong{color:var(--gray-700)}
+.tp-body h2{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--gray-700);margin:32px 0 12px}
+.tp-body h2:first-of-type{margin-top:0}
+.tp-pullquote{padding:20px 24px;background:rgba(13,148,136,.03);border-left:3px solid var(--teal);border-radius:0 12px 12px 0;margin:24px 0}
+.tp-pullquote p{font-family:var(--serif);font-size:.92rem;font-style:italic;color:var(--gray-700);line-height:1.5;margin:0}
 .tp-details{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0;padding:24px;background:var(--white);border:1px solid var(--gray-100);border-radius:16px}
 .tp-detail{text-align:center}
 .tp-detail-val{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--gray-700);margin-bottom:2px}
