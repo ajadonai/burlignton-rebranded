@@ -533,7 +533,7 @@ body.home .hero{opacity:1;transform:none}
 .tm-footer{border-top:1px solid rgba(255,255,255,.06);padding:40px var(--side-pad) 28px;margin-top:auto;text-align:left}
 
 /* Snap scroll */
-body.team{scroll-snap-type:y proximity;overflow-y:scroll}
+body.team{scroll-snap-type:y mandatory;overflow-y:scroll;scroll-behavior:smooth}
 body.team .tm-hero,body.team .tm-founders,body.team .tm-group,body.team .tm-join{scroll-snap-align:start;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center}
 body.team .tm-hero{justify-content:center;align-items:center}
 body.team .section-nav{display:flex}
