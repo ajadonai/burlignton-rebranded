@@ -236,9 +236,7 @@
 (function(){
   var secs = document.querySelectorAll('[data-section]');
   var dots = document.querySelectorAll('.sn-dot');
-  if(!dots.length || !secs.length) return;
-
-  // Dot tracking
+  if(!dots.length) return;
   var trackObs = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if(e.isIntersecting){
@@ -248,65 +246,11 @@
     });
   },{threshold:0.5});
   secs.forEach(function(s){trackObs.observe(s)});
-
-  // Slow smooth scroll function
-  function slowScroll(target){
-    var start = window.scrollY;
-    var end = target.offsetTop;
-    var distance = end - start;
-    var duration = 1200;
-    var startTime = null;
-    function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
-    function step(time){
-      if(!startTime) startTime = time;
-      var progress = Math.min((time - startTime) / duration, 1);
-      window.scrollTo(0, start + distance * ease(progress));
-      if(progress < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-
-  // Dot click
   dots.forEach(function(d,k){
     d.addEventListener('click',function(){
-      if(secs[k]) slowScroll(secs[k]);
+      if(secs[k]) secs[k].scrollIntoView({behavior:'smooth'});
     });
   });
-
-  // Wheel scroll — debounce and animate to next/prev section
-  var scrolling = false;
-  var current = 0;
-  window.addEventListener('wheel', function(e){
-    if(scrolling) return;
-    e.preventDefault();
-    scrolling = true;
-    if(e.deltaY > 0 && current < secs.length - 1) current++;
-    else if(e.deltaY < 0 && current > 0) current--;
-    slowScroll(secs[current]);
-    setTimeout(function(){ scrolling = false; }, 1400);
-  }, {passive:false});
-
-  // Touch support
-  var touchStart = 0;
-  window.addEventListener('touchstart', function(e){ touchStart = e.touches[0].clientY; });
-  window.addEventListener('touchend', function(e){
-    if(scrolling) return;
-    var diff = touchStart - e.changedTouches[0].clientY;
-    if(Math.abs(diff) < 50) return;
-    scrolling = true;
-    if(diff > 0 && current < secs.length - 1) current++;
-    else if(diff < 0 && current > 0) current--;
-    slowScroll(secs[current]);
-    setTimeout(function(){ scrolling = false; }, 1400);
-  });
-
-  // Sync current index on manual scroll
-  var syncObs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting) current = Array.prototype.indexOf.call(secs, e.target);
-    });
-  },{threshold:0.5});
-  secs.forEach(function(s){syncObs.observe(s)});
 })();
 </script>
 </body>
