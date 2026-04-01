@@ -94,6 +94,17 @@
               </div>
               <div class="bk-f-group"><label class="bk-f-label">Relationship to you</label><input type="text" class="bk-f-input" name="payer_relationship" placeholder="Spouse, family member, employer..."></div>
             </div>
+            <div class="bk-f-group" style="margin-top:4px;">
+              <label style="display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--gray-400);cursor:pointer;">
+                <input type="checkbox" id="hasReferral" onchange="document.getElementById('referralFields').style.display=this.checked?'block':'none'" style="accent-color:var(--teal);width:16px;height:16px;cursor:pointer;">
+                I was referred by someone
+              </label>
+            </div>
+            <div id="referralFields" style="display:none;margin-top:16px;padding:20px;background:rgba(13,148,136,.02);border:1px solid rgba(13,148,136,.06);border-radius:12px;">
+              <p style="font-size:.8rem;color:var(--teal);font-weight:500;margin-bottom:14px;">Referral details</p>
+              <div class="bk-f-group"><label class="bk-f-label">Referrer's full name</label><input type="text" class="bk-f-input" name="referrer_name" placeholder="Who referred you?"></div>
+              <div class="bk-f-group" style="margin-bottom:0"><label class="bk-f-label">Referrer's email or phone</label><input type="text" class="bk-f-input" name="referrer_contact" placeholder="Email or phone number"></div>
+            </div>
             <button type="submit" class="bk-f-submit">Continue to Payment <span class="btn-arrow">&rarr;</span></button>
             <div class="bk-f-secure"><svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="1.5" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Payment secured by Stripe</div>
           </form>
