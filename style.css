@@ -191,6 +191,7 @@ body.home footer{scroll-snap-align:end}
   .nav-links{display:none}
   .nav-hamburger{display:flex}
   .nav-tagline{display:none}
+  .section-nav{display:none}
 
   /* Kill snap + full-height */
   body.home{scroll-snap-type:none}
@@ -330,8 +331,8 @@ body.home footer{scroll-snap-align:end}
   .ab-cta-btns .btn-primary,.ab-cta-btns .btn-secondary{width:100%;max-width:320px;justify-content:center}
 }
 
-/* ── SCROLL INDICATOR (homepage hero) ── */
-.hero-scroll-hint{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:4px;margin-bottom:16px;animation:heroFadeUp 1.2s cubic-bezier(.16,1,.3,1) .9s both}
-.hero-scroll-hint span{font-size:.6rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.25)}
-.hero-scroll-hint svg{stroke:rgba(45,212,191,.4);animation:scrollBounce 2s ease-in-out infinite}
-@keyframes scrollBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+/* ── SECTION NAV DOTS (homepage) ── */
+.section-nav{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:800;display:flex;flex-direction:column;gap:6px;padding:10px 6px}
+.sn-dot{width:16px;height:16px;border-radius:50%;cursor:pointer;position:relative;display:flex;align-items:center;justify-content:center}
+.sn-dot i{display:block;width:6px;height:6px;border-radius:50%;background:rgba(120,119,111,.2);border:1.5px solid rgba(120,119,111,.15);transition:all .3s}
+.sn-dot.active i{background:var(--teal);border-color:rgba(45,212,191,.4);box-shadow:0 0 8px rgba(45,212,191,.3);width:7px;height:7px}

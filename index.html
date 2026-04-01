@@ -24,7 +24,7 @@
 
 
 <!-- §1 HERO -->
-<section class="hero">
+<section class="hero" data-section>
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-rings"><div class="ring"></div><div class="ring"></div><div class="ring"></div></div>
@@ -40,7 +40,6 @@
   </div>
 
   <!-- HERO STATS — outside hero-content for full width -->
-  <div class="hero-scroll-hint"><span>Scroll</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
   <div class="hero-stats">
     <div class="hero-stat"><div class="hero-stat-value">99%</div><div class="hero-stat-label">Einstein Visa (EB-1A) approval rate</div></div>
     <div class="hero-stat"><div class="hero-stat-value">&lt;5%</div><div class="hero-stat-label">Of green cards carry Einstein Visa (EB-1A) status</div></div>
@@ -58,7 +57,7 @@
 
 
 <!-- §2 WHAT WE DO -->
-<section class="pitch">
+<section class="pitch" data-section>
   <div class="container">
     <div class="pitch-grid">
       <div class="pitch-left">
@@ -87,7 +86,7 @@
 </section>
 
 <!-- §3 CREDIT LADDER -->
-<section class="ladder">
+<section class="ladder" data-section>
   <div class="container ladder-inner">
     <div class="tag" style="justify-content:center;color:var(--teal-bright);display:flex">How to start</div>
     <h2>Every fee credits toward the next.</h2>
@@ -120,7 +119,7 @@
 </section>
 
 <!-- §4 WHO WE ARE -->
-<section class="team-strip">
+<section class="team-strip" data-section>
   <div class="container">
     <div class="team-strip-grid">
       <div class="team-strip-left">
@@ -150,7 +149,7 @@
 </section>
 
 <!-- §5 SOCIAL PROOF -->
-<section class="proof">
+<section class="proof" data-section>
   <div class="container">
     <div class="proof-inner">
       <div class="proof-quote">
@@ -168,7 +167,7 @@
 </section>
 
 <!-- §6 FINAL CTA -->
-<section class="final-cta">
+<section class="final-cta" data-section>
   <div class="final-cta-inner">
     <h2>Find out where you stand.</h2>
     <p>Submit your professional background for a written assessment. Burlington Consult reviews your record and advises on the strongest available pathway within 48 hours.</p>
@@ -178,6 +177,15 @@
     </div>
   </div>
 </section>
+
+<div class="section-nav" id="sectionNav">
+  <div class="sn-dot active"><i></i></div>
+  <div class="sn-dot"><i></i></div>
+  <div class="sn-dot"><i></i></div>
+  <div class="sn-dot"><i></i></div>
+  <div class="sn-dot"><i></i></div>
+  <div class="sn-dot"><i></i></div>
+</div>
 
 <footer>
   <div class="ft-inner">
@@ -224,5 +232,30 @@
 
 
 <script>function openMobileNav(){document.getElementById('mobileNav').classList.add('open');document.getElementById('mobileBackdrop').classList.add('open');document.body.style.overflow='hidden';}function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');document.getElementById('mobileBackdrop').classList.remove('open');document.body.style.overflow='';}</script>
+
+<script>
+(function(){
+  var secs = document.querySelectorAll('[data-section]');
+  var dots = document.querySelectorAll('.sn-dot');
+  if(!secs.length || !dots.length) return;
+  setInterval(function(){
+    var active = 0;
+    for(var i = 0; i < secs.length; i++){
+      var r = secs[i].getBoundingClientRect();
+      if(r.top < window.innerHeight * 0.5 && r.bottom > 0) active = i;
+    }
+    for(var j = 0; j < dots.length; j++){
+      dots[j].className = j === active ? 'sn-dot active' : 'sn-dot';
+    }
+  }, 150);
+  for(var k = 0; k < dots.length; k++){
+    (function(idx){
+      dots[idx].addEventListener('click', function(){
+        if(secs[idx]) secs[idx].scrollIntoView({behavior:'smooth'});
+      });
+    })(k);
+  }
+})();
+</script>
 </body>
 </html>
