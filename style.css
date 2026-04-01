@@ -633,3 +633,16 @@ select.bk-f-input{appearance:none;background-image:url("data:image/svg+xml,%3Csv
   .bk-f-row{grid-template-columns:1fr}
   .bk-form-card{padding:24px 20px}
 }
+
+/* Mobile/desktop content toggle */
+.sv-mobile-only{display:none}
+.sv-compact-list{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.sv-compact-item{display:flex;align-items:center;gap:10px;font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.4}
+.sv-compact-item svg{flex-shrink:0}
+.sv-compact-price{padding:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;text-align:center}
+.sv-compact-price-val{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--white);margin-bottom:4px}
+.sv-compact-price-note{font-size:.74rem;color:rgba(255,255,255,.35);line-height:1.5}
+@media(max-width:768px){
+  .sv-desktop-only{display:none}
+  .sv-mobile-only{display:block}
+}
