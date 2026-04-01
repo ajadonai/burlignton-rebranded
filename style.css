@@ -1435,6 +1435,7 @@ select.cr-f-input option{background:#0D1E2B;color:var(--white)}
 .cr-file-name{display:none;font-size:.8rem;color:var(--teal-bright);margin-top:8px;font-weight:500}
 
 @media(max-width:900px){
+  .cr-values-grid{grid-template-columns:1fr}
   .cr-open-roles{grid-template-columns:1fr 1fr}
   .cr-apply-grid{grid-template-columns:1fr}
 }
