@@ -561,3 +561,52 @@ body.team .section-nav{display:flex}
   .tm-card-photo,.tm-card-placeholder{height:160px}
   .tm-card-overlay{height:160px}
 }
+
+/* ═══════════════════════════════════════════════
+   BOOK A CONSULTATION PAGE
+   ═══════════════════════════════════════════════ */
+
+.bk-hero{padding:160px 0 80px;background:var(--dark-base);position:relative;overflow:hidden}
+.bk-hero-bg{position:absolute;inset:0;background:url('/hero-bg.jpg') center/cover no-repeat;filter:brightness(.12) saturate(.3);z-index:0}
+.bk-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 40% 50%,rgba(13,148,136,.1),transparent);z-index:1}
+.bk-hero-inner{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:48px}
+.bk-hero-text{max-width:520px}
+.bk-hero h1{font-family:var(--serif);font-size:clamp(2rem,4vw,2.8rem);font-weight:500;color:var(--white);line-height:1.15;margin-bottom:16px}
+.bk-hero p{font-size:.95rem;color:rgba(255,255,255,.45);line-height:1.8}
+.bk-stats{display:flex;gap:32px}
+.bk-stat{text-align:center;padding:20px 24px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:14px;min-width:120px}
+.bk-stat-val{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:4px}
+.bk-stat-label{font-size:.68rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em}
+
+.bk-form-section{padding:var(--section-pad) 0;background:var(--off-white)}
+.bk-form-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
+.bk-form-left h2{font-family:var(--serif);font-size:1.4rem;font-weight:500;color:var(--gray-700);margin-bottom:24px}
+.bk-steps{display:flex;flex-direction:column;gap:20px}
+.bk-step{display:flex;gap:16px;align-items:flex-start}
+.bk-step-num{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--teal);min-width:28px;flex-shrink:0}
+.bk-step-title{font-size:.88rem;font-weight:500;color:var(--gray-700);margin-bottom:4px}
+.bk-step-desc{font-size:.8rem;color:var(--gray-400);line-height:1.6}
+
+.bk-form-card{background:var(--white);border:1px solid var(--gray-100);border-radius:20px;padding:36px}
+.bk-f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bk-f-group{margin-bottom:14px}
+.bk-f-label{font-size:.76rem;font-weight:500;color:var(--gray-700);margin-bottom:6px;display:block}
+.bk-f-label span{color:var(--teal)}
+.bk-f-input{width:100%;padding:12px 16px;border:1px solid var(--gray-100);border-radius:10px;font-size:.86rem;font-family:var(--sans);color:var(--gray-700);background:var(--off-white);outline:none;transition:border-color .2s}
+.bk-f-input:focus{border-color:rgba(13,148,136,.3)}
+.bk-f-input::placeholder{color:var(--gray-300)}
+textarea.bk-f-input{resize:vertical;min-height:100px;line-height:1.6}
+select.bk-f-input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23A8A7A3' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.bk-f-submit{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:15px 36px;background:linear-gradient(135deg,var(--teal),var(--teal-bright));color:var(--white);font-family:var(--sans);font-size:.88rem;font-weight:500;border:none;border-radius:12px;cursor:pointer;box-shadow:0 4px 20px rgba(13,148,136,.25);transition:all .3s;margin-top:8px}
+.bk-f-submit:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(13,148,136,.35)}
+.bk-f-secure{display:flex;align-items:center;justify-content:center;gap:6px;font-size:.74rem;color:var(--gray-300);margin-top:12px}
+
+@media(max-width:768px){
+  .bk-hero{padding:120px 0 60px}
+  .bk-hero-inner{flex-direction:column;text-align:center}
+  .bk-stats{justify-content:center;flex-wrap:wrap;gap:12px}
+  .bk-stat{min-width:auto;flex:1;min-width:90px}
+  .bk-form-layout{grid-template-columns:1fr;gap:40px}
+  .bk-f-row{grid-template-columns:1fr}
+  .bk-form-card{padding:24px 20px}
+}
