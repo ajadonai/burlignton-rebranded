@@ -361,7 +361,8 @@ body.home .hero{opacity:1;transform:none}
 .sv-card.active{border-color:rgba(45,212,191,.25);box-shadow:0 0 48px rgba(13,148,136,.1);cursor:default;transform:none}
 .sv-card::before{content:'';position:absolute;top:0;left:80px;right:24px;height:1px;background:linear-gradient(90deg,transparent,rgba(45,212,191,.12),transparent);z-index:1}
 
-.sv-card-num{width:72px;background:linear-gradient(180deg,var(--teal),rgba(13,148,136,.7));display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative}
+.sv-card-num{width:72px;background:linear-gradient(180deg,var(--teal),rgba(13,148,136,.7));display:flex;align-items:flex-start;justify-content:center;padding-top:36px;flex-shrink:0;position:relative;border-radius:18px 0 0 18px}
+.sv-card.active .sv-card-num{border-radius:18px 0 0 18px}
 .sv-card-num::after{content:'';position:absolute;top:0;right:0;bottom:0;width:1px;background:linear-gradient(180deg,rgba(45,212,191,.2),transparent)}
 .sv-card-num span{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--white);opacity:.9}
 
@@ -442,14 +443,23 @@ body.home .hero{opacity:1;transform:none}
 }
 @media(max-width:768px){
   .sv-hero{padding:120px 0 60px}
-  .sv-card-num{width:52px}
+  .sv-card{border-radius:16px}
+  .sv-card::before{left:56px}
+  .sv-card-num{width:48px;padding-top:22px;border-radius:16px 0 0 16px}
+  .sv-card.active .sv-card-num{border-radius:16px 0 0 16px}
   .sv-card-num span{font-size:1rem}
-  .sv-card-header{padding:20px;gap:12px}
-  .sv-card-header h3{font-size:1rem}
-  .sv-card-price{font-size:.9rem}
-  .sv-card-icon{width:40px;height:40px}
-  .sv-card.active .sv-card-body{padding:0 20px 28px}
+  .sv-card-header{padding:18px 16px;gap:10px}
+  .sv-card-header h3{font-size:.95rem}
+  .sv-card-subtitle{font-size:.68rem}
+  .sv-card-price{font-size:.85rem}
+  .sv-card-icon{width:38px;height:38px;border-radius:10px}
+  .sv-card-icon svg{width:18px;height:18px}
   .sv-card-tag{display:none}
+  .sv-card-toggle{width:28px;height:28px}
+  .sv-card-toggle svg{width:12px;height:12px}
+  .sv-card-body{padding:0 16px}
+  .sv-card.active .sv-card-body{padding:0 16px 20px}
+  .sv-card-intro{font-size:.82rem}
   .sv-del-grid{grid-template-columns:1fr}
   .sv-timeline{flex-direction:column;gap:0}
   .sv-timeline::before{top:0;bottom:0;left:8px;width:2px;height:auto}
