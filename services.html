@@ -263,10 +263,22 @@ function toggleService(id) {
   var clicked = document.getElementById(id);
   var wasActive = clicked.classList.contains('active');
 
+  // Remember where the clicked card is on screen before anything changes
+  var rectBefore = clicked.getBoundingClientRect();
+  var offsetBefore = rectBefore.top;
+
   cards.forEach(function(c) { c.classList.remove('active'); });
 
   if (!wasActive) {
     clicked.classList.add('active');
+    // After DOM updates, correct scroll so card stays in same screen position
+    requestAnimationFrame(function() {
+      var rectAfter = clicked.getBoundingClientRect();
+      var drift = rectAfter.top - offsetBefore;
+      if (Math.abs(drift) > 5) {
+        window.scrollBy(0, drift);
+      }
+    });
   }
 }
 // Prevent body clicks inside card-body from toggling
