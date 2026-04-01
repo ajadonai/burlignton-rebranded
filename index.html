@@ -19,30 +19,9 @@
 </head>
 <body>
 
-<nav>
-  <a href="/" class="nav-logo">Burlington<span class="nav-logo-dot"></span><span class="nav-tagline">Immigration Advisory</span></a>
-  <ul class="nav-links">
-    <li><a href="/about">About</a></li>
-    <li class="nav-divider"></li>
-    <li><a href="/services">Services</a></li>
-    <li class="nav-divider"></li>
-    <li><a href="/team">Team</a></li>
-    <li><a href="/book" class="nav-cta">Book a Consultation</a></li>
-  </ul>
-  <button class="nav-hamburger" onclick="openMobileNav()" aria-label="Open menu"><span></span><span></span><span></span></button>
-</nav>
+<nav><a href="/" class="nav-logo">Burlington<span class="nav-logo-dot"></span><span class="nav-tagline">Immigration Advisory</span></a><ul class="nav-links"><li><a href="/about">About</a></li><li class="nav-divider"></li><li><a href="/services">Services</a></li><li class="nav-divider"></li><li><a href="/team">Team</a></li><li><a href="/book" class="nav-cta">Book a Consultation</a></li></ul><button class="nav-hamburger" onclick="openMobileNav()" aria-label="Open menu"><span></span><span></span><span></span></button></nav>
+<div class="mobile-nav-backdrop" id="mobileBackdrop" onclick="closeMobileNav()"></div><div class="mobile-nav" id="mobileNav"><button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Close menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div style="flex:1;padding:16px 28px;display:flex;flex-direction:column;overflow-y:auto;"><a href="/" class="mobile-nav-link" onclick="closeMobileNav()"><span class="mn-num">01</span><span class="mn-text">Home</span></a><a href="/about" class="mobile-nav-link" onclick="closeMobileNav()"><span class="mn-num">02</span><span class="mn-text">About</span></a><a href="/services" class="mobile-nav-link" onclick="closeMobileNav()"><span class="mn-num">03</span><span class="mn-text">Services</span></a><a href="/team" class="mobile-nav-link" onclick="closeMobileNav()"><span class="mn-num">04</span><span class="mn-text">Team</span></a></div><div style="padding:24px 28px 40px;"><a href="/book" class="mobile-nav-cta">Book a Consultation</a></div></div>
 
-<div class="mobile-nav-backdrop" id="mobileBackdrop" onclick="closeMobileNav()"></div>
-<div class="mobile-nav" id="mobileNav">
-  <button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Close menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-  <div class="mobile-nav-links">
-    <a href="/" class="mobile-nav-link" onclick="closeMobileNav()"><span class="mn-num">01</span><span class="mn-text">Home</span></a>
-    <a href="/about" class="mobile-nav-link" onclick="closeMobileNav()"><span class="mn-num">02</span><span class="mn-text">About</span></a>
-    <a href="/services" class="mobile-nav-link" onclick="closeMobileNav()"><span class="mn-num">03</span><span class="mn-text">Services</span></a>
-    <a href="/team" class="mobile-nav-link" onclick="closeMobileNav()"><span class="mn-num">04</span><span class="mn-text">Team</span></a>
-  </div>
-  <div class="mobile-nav-cta-wrap"><a href="/book" class="mobile-nav-cta">Book a Consultation</a></div>
-</div>
 
 <!-- §1 HERO -->
 <section class="hero">
@@ -51,7 +30,7 @@
   <div class="hero-grid"></div>
   <div class="hero-content">
     <div class="hero-badge"><span class="hero-badge-dot"></span> Immigration Strategy &amp; Advisory</div>
-    <h1>The fastest path to a <span class="highlight">U.S. green card</span> for exceptional professionals.</h1>
+    <h1>The fastest path to a <span class="hl">U.S. green card</span> for exceptional professionals.</h1>
     <p class="hero-sub">Burlington Consult develops and files Einstein Visa (EB-1A) and NIW (EB-2) petitions for high-achieving professionals — enabling permanent U.S. residency without an employer sponsor.</p>
     <div class="hero-btns">
       <a href="/assess" class="btn-primary">Start Profile Assessment &middot; <span style="text-decoration:line-through;color:rgba(255,255,255,.4);font-weight:400;">$113</span> $85 &rarr;</a>
@@ -98,7 +77,7 @@
 <!-- §3 CREDIT LADDER -->
 <section class="ladder">
   <div class="container ladder-inner">
-    <div class="tag tag-center tag-light">How to start</div>
+    <div class="tag" style="justify-content:center;color:var(--teal-bright)">How to start</div>
     <h2>Every fee credits toward the next.</h2>
     <p class="ladder-sub">Start small. Commit when you're ready. Nothing is wasted.</p>
     <div class="ladder-steps">
@@ -189,13 +168,13 @@
 </section>
 
 <footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
+  <div class="ft-inner" style="max-width:1200px;margin:0 auto;">
+    <div class="ft-grid" style="display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;">
       <div>
-        <a href="/" class="footer-brand">Burlington<span class="footer-brand-dot"></span></a>
-        <p class="footer-desc">Immigration strategy, elite graduate admissions, and career advisory for high-achieving professionals across three continents.</p>
+        <a href="/" class="ft-brand">Burlington<span class="ft-brand-dot"></span></a>
+        <p class="ft-desc">Immigration strategy, elite graduate admissions, and career advisory for high-achieving professionals across three continents.</p>
       </div>
-      <div class="footer-col">
+      <div class="ft-col">
         <h4>Pathways</h4>
         <a href="/eb1a">Einstein Visa (EB-1A)</a>
         <a href="/niw">NIW Petition (EB-2)</a>
@@ -203,14 +182,14 @@
         <a href="/eb1a-creatives">EB-1A for Creatives</a>
         <a href="/pathways">All Pathways</a>
       </div>
-      <div class="footer-col">
+      <div class="ft-col">
         <h4>Resources</h4>
         <a href="/resources">Knowledge Center</a>
         <a href="/assess">Profile Assessment</a>
         <a href="/cases">Case Profiles</a>
         <a href="/faq">FAQ</a>
       </div>
-      <div class="footer-col">
+      <div class="ft-col">
         <h4>Company</h4>
         <a href="/about">About</a>
         <a href="/team">Team</a>
@@ -218,16 +197,13 @@
         <a href="/contact">Contact</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="footer-legal">Burlington Consult, LLC &middot; Incorporated in Delaware &middot; The Octagon, Victoria Island, Lagos</div>
-      <div class="footer-links"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a></div>
+    <div class="ft-bottom">
+      <div class="ft-legal">Burlington Consult, LLC &middot; Incorporated in Delaware &middot; The Octagon, Victoria Island, Lagos</div>
+      <div class="ft-links"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a></div>
     </div>
   </div>
 </footer>
 
-<script>
-function openMobileNav(){document.getElementById('mobileNav').classList.add('open');document.getElementById('mobileBackdrop').classList.add('open');document.body.style.overflow='hidden';}
-function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');document.getElementById('mobileBackdrop').classList.remove('open');document.body.style.overflow='';}
-</script>
+<script>function openMobileNav(){document.getElementById('mobileNav').classList.add('open');document.getElementById('mobileBackdrop').classList.add('open');document.body.style.overflow='hidden';}function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');document.getElementById('mobileBackdrop').classList.remove('open');document.body.style.overflow='';}</script>
 </body>
 </html>
