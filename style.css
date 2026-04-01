@@ -103,23 +103,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 var(--side-pad);h
 .pitch-card p{font-size:.78rem;color:var(--gray-400);line-height:1.55;margin-bottom:0}
 
 /* ── CREDIT LADDER ── */
-.ladder{padding:var(--section-pad) 0;background:var(--dark-base);position:relative;overflow:hidden}
+.ladder{padding:60px 0;background:var(--dark-base);position:relative;overflow:hidden}
 .ladder::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,transparent,transparent 80px,rgba(45,212,191,.015) 80px,rgba(45,212,191,.015) 81px)}
 .ladder-inner{position:relative;z-index:1}
-.ladder h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:500;color:var(--white);text-align:center;margin-bottom:8px}
-.ladder-sub{text-align:center;font-size:.92rem;color:rgba(255,255,255,.45);margin-bottom:56px;max-width:500px;margin-left:auto;margin-right:auto}
+.ladder h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:500;color:var(--white);text-align:center;margin-bottom:6px}
+.ladder-sub{text-align:center;font-size:.88rem;color:rgba(255,255,255,.45);margin-bottom:36px;max-width:500px;margin-left:auto;margin-right:auto}
 .ladder-steps{display:flex;align-items:center;justify-content:center;max-width:900px;margin:0 auto}
-.ladder-step{flex:1;text-align:center;padding:32px 20px}
-.ladder-step-num{font-size:.65rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-bright);margin-bottom:12px}
-.ladder-step-price{font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--white);margin-bottom:4px}
+.ladder-step{flex:1;text-align:center;padding:20px 16px}
+.ladder-step-num{font-size:.62rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-bright);margin-bottom:8px}
+.ladder-step-price{font-family:var(--serif);font-size:1.8rem;font-weight:600;color:var(--white);margin-bottom:3px}
 .ladder-step-price .old{text-decoration:line-through;color:#E24B4A;font-size:.7em;opacity:.6;margin-right:6px}
-.ladder-step-name{font-size:.82rem;font-weight:500;color:rgba(255,255,255,.7);margin-bottom:8px}
-.ladder-step-desc{font-size:.76rem;color:rgba(255,255,255,.35);line-height:1.6}
-.ladder-arrow{width:40px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.ladder-arrow svg{width:20px;height:20px;stroke:rgba(45,212,191,.3);stroke-width:2;fill:none}
-.ladder-note{text-align:center;margin-top:40px;font-size:.82rem;color:rgba(255,255,255,.4);max-width:500px;margin-left:auto;margin-right:auto}
+.ladder-step-name{font-size:.8rem;font-weight:500;color:rgba(255,255,255,.7);margin-bottom:6px}
+.ladder-step-desc{font-size:.74rem;color:rgba(255,255,255,.35);line-height:1.5}
+.ladder-arrow{width:36px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ladder-arrow svg{width:18px;height:18px;stroke:rgba(45,212,191,.3);stroke-width:2;fill:none}
+.ladder-note{text-align:center;margin-top:28px;font-size:.8rem;color:rgba(255,255,255,.4);max-width:500px;margin-left:auto;margin-right:auto}
 .ladder-note strong{color:var(--teal-bright);font-weight:500}
-.ladder-cta{display:flex;justify-content:center;margin-top:36px}
+.ladder-cta{display:flex;justify-content:center;margin-top:24px}
 
 /* ── TEAM STRIP ── */
 .team-strip{padding:var(--section-pad) 0;background:var(--off-white)}
@@ -177,7 +177,7 @@ footer{background:linear-gradient(180deg,var(--dark-base),#0A141A);border-top:1p
 /* ── SNAP SCROLL (homepage only) ── */
 body.home{scroll-snap-type:y proximity;overflow-y:scroll}
 body.home .hero,body.home .pitch,body.home .ladder,body.home .team-strip,body.home .proof,body.home .final-cta{scroll-snap-align:start;min-height:100vh;min-height:100dvh}
-body.home .pitch,body.home .ladder,body.home .team-strip,body.home .proof,body.home .final-cta{display:flex;flex-direction:column;justify-content:center}
+body.home .pitch,body.home .ladder,body.home .team-strip,body.home .proof,body.home .final-cta{display:flex;flex-direction:column;justify-content:center;padding-top:48px;padding-bottom:48px}
 body.home footer{scroll-snap-align:end}
 
 /* ── TABLET ── */
