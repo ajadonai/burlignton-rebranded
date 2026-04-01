@@ -174,11 +174,11 @@ footer{background:linear-gradient(180deg,var(--dark-base),#0A141A);border-top:1p
 .ft-links a{font-size:.72rem;color:rgba(255,255,255,.3)}
 .ft-links a:hover{color:var(--teal-bright)}
 
-/* ── SNAP SCROLL (desktop) ── */
-html{scroll-snap-type:y mandatory}
-.hero,.pitch,.ladder,.team-strip,.proof,.final-cta{scroll-snap-align:start;min-height:100vh}
-.pitch,.ladder,.team-strip,.proof,.final-cta{display:flex;flex-direction:column;justify-content:center}
-footer{scroll-snap-align:end}
+/* ── SNAP SCROLL (homepage only) ── */
+body.home{scroll-snap-type:y mandatory;overflow-y:scroll}
+body.home .hero,body.home .pitch,body.home .ladder,body.home .team-strip,body.home .proof,body.home .final-cta{scroll-snap-align:start;min-height:100vh}
+body.home .pitch,body.home .ladder,body.home .team-strip,body.home .proof,body.home .final-cta{display:flex;flex-direction:column;justify-content:center}
+body.home footer{scroll-snap-align:end}
 
 /* ── TABLET ── */
 @media(max-width:1024px){
@@ -193,8 +193,8 @@ footer{scroll-snap-align:end}
   .nav-tagline{display:none}
 
   /* Kill snap + full-height */
-  html{scroll-snap-type:none}
-  .pitch,.ladder,.team-strip,.proof,.final-cta{min-height:auto;scroll-snap-align:none;display:block}
+  body.home{scroll-snap-type:none}
+  body.home .pitch,body.home .ladder,body.home .team-strip,body.home .proof,body.home .final-cta{min-height:auto;scroll-snap-align:none;display:block}
 
   /* Hero stays full height */
   .hero{padding-top:80px}
