@@ -263,22 +263,18 @@ function toggleService(id) {
   var clicked = document.getElementById(id);
   var wasActive = clicked.classList.contains('active');
 
-  // Remember where the clicked card is on screen before anything changes
-  var rectBefore = clicked.getBoundingClientRect();
-  var offsetBefore = rectBefore.top;
-
   cards.forEach(function(c) { c.classList.remove('active'); });
 
   if (!wasActive) {
     clicked.classList.add('active');
-    // After DOM updates, correct scroll so card stays in same screen position
-    requestAnimationFrame(function() {
-      var rectAfter = clicked.getBoundingClientRect();
-      var drift = rectAfter.top - offsetBefore;
-      if (Math.abs(drift) > 5) {
-        window.scrollBy(0, drift);
+    // Wait for the max-height collapse transition to settle, then pin card to top
+    setTimeout(function() {
+      var navHeight = 80;
+      var rect = clicked.getBoundingClientRect();
+      if (rect.top < navHeight || rect.top > window.innerHeight * 0.4) {
+        window.scrollTo({ top: window.scrollY + rect.top - navHeight - 20, behavior: 'smooth' });
       }
-    });
+    }, 550);
   }
 }
 // Prevent body clicks inside card-body from toggling
