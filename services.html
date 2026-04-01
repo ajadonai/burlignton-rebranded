@@ -267,9 +267,6 @@ function toggleService(id) {
 
   if (!wasActive) {
     clicked.classList.add('active');
-    setTimeout(function() {
-      clicked.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 50);
   }
 }
 // Prevent body clicks inside card-body from toggling
