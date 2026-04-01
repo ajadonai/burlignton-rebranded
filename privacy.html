@@ -43,6 +43,12 @@
     <div class="lg-updated">Last updated: March 2026</div>
     <a href="/" class="lg-back">&larr; Back to home</a>
   </nav>
+  <div class="lg-mobile-nav">
+    <div class="lg-mobile-label">Jump to section</div>
+    <select class="lg-mobile-select" onchange="var t=document.getElementById(this.value);if(t)window.scrollTo({top:t.offsetTop-100,behavior:'smooth'})">
+      <option value="intro">Introduction</option><option value="collect">Information we collect</option><option value="use">How we use it</option><option value="sharing">Data sharing</option><option value="security">Data security</option><option value="retention">Data retention</option><option value="rights">Your rights</option><option value="cookies">Cookies & analytics</option><option value="changes">Changes</option><option value="contact">Contact</option>
+    </select>
+  </div>
   <div class="lg-content">
     <h2 id="intro">Introduction</h2>
     <p>Burlington Consult, LLC ("Burlington Consult," "we," "us," or "our") respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at burlingtonconsult.com or engage our advisory services.</p>

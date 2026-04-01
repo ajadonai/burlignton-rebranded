@@ -44,6 +44,12 @@
     <div class="lg-updated">Last updated: March 2026</div>
     <a href="/" class="lg-back">&larr; Back to home</a>
   </nav>
+  <div class="lg-mobile-nav">
+    <div class="lg-mobile-label">Jump to section</div>
+    <select class="lg-mobile-select" onchange="var t=document.getElementById(this.value);if(t)window.scrollTo({top:t.offsetTop-100,behavior:'smooth'})">
+      <option value="agreement">Agreement to terms</option><option value="nature">Nature of services</option><option value="guarantee">No guarantee of outcome</option><option value="client">Client responsibilities</option><option value="fees">Fees and payment</option><option value="confidentiality">Confidentiality</option><option value="ip">Intellectual property</option><option value="liability">Limitation of liability</option><option value="governing">Governing law</option><option value="changes">Changes</option><option value="contact">Contact</option>
+    </select>
+  </div>
   <div class="lg-content">
     <h2 id="agreement">Agreement to terms</h2>
     <p>By accessing or using the Burlington Consult website at burlingtonconsult.com and by engaging our advisory services, you agree to be bound by these Terms of Service. If you do not agree to these terms, you should not use our website or services.</p>

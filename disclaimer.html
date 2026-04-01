@@ -45,6 +45,12 @@
     <a href="/" class="lg-back">&larr; Back to home</a>
   </nav>
 
+  <div class="lg-mobile-nav">
+    <div class="lg-mobile-label">Jump to section</div>
+    <select class="lg-mobile-select" onchange="var t=document.getElementById(this.value);if(t)window.scrollTo({top:t.offsetTop-100,behavior:'smooth'})">
+      <option value="general">General disclaimer</option><option value="attorney">No attorney-client relationship</option><option value="results">No guarantee of results</option><option value="regulatory">Regulatory information</option><option value="third-party">Third-party references</option><option value="fees">USCIS filing fees</option><option value="testimonials">Testimonials</option><option value="qualifications">Professional qualifications</option><option value="liability">Limitation of liability</option><option value="contact">Contact</option>
+    </select>
+  </div>
   <div class="lg-content">
     <h2 id="general">General disclaimer</h2>
     <p>The information provided on the Burlington Consult website and in our advisory materials is for general informational purposes only and does not constitute legal advice. Burlington Consult, LLC is not a law firm, and the services provided do not constitute the practice of law.</p>
