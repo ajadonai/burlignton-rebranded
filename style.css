@@ -682,3 +682,29 @@ footer {
   .team-strip-photo{width:160px}
   .proof-stats{gap:24px;flex-wrap:wrap}
 }
+
+/* ═══ SNAP SCROLL ═══ */
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.hero,
+.pitch,
+.ladder,
+.team-strip,
+.proof,
+.final-cta,
+footer {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero { min-height: 100vh; }
+footer { min-height: auto; scroll-snap-align: end; }
+
+@media (max-width: 768px) {
+  html { scroll-snap-type: none; }
+  .pitch, .ladder, .team-strip, .proof, .final-cta { min-height: auto; }
+}
