@@ -348,8 +348,9 @@ body.home .hero{opacity:1;transform:none}
    ═══════════════════════════════════════════════ */
 
 .sv-hero{padding:160px 0 80px;background:var(--dark-base);position:relative;overflow:hidden}
-.sv-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 30% 50%,rgba(13,148,136,.1),transparent)}
-.sv-hero-inner{position:relative;z-index:1;max-width:640px}
+.sv-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 30% 50%,rgba(13,148,136,.1),transparent);z-index:1}
+.sv-hero-bg{position:absolute;inset:0;background:url('/hero-bg.jpg') center/cover no-repeat;filter:brightness(.12) saturate(.3);z-index:0}
+.sv-hero-inner{position:relative;z-index:2;max-width:640px}
 .sv-hero h1{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);font-weight:500;color:var(--white);line-height:1.12;margin-bottom:16px}
 .sv-hero p{font-size:.95rem;color:rgba(255,255,255,.45);line-height:1.8}
 
